@@ -10,6 +10,7 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="js/slick/slick.css">
+        <link rel="stylesheet" href="js/slick/slick-theme.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
@@ -122,7 +123,12 @@
         <script src="js/slick/slick.min.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript">
-          $('.slides').slick();
+          $('.slides').slick({
+            fade: true,
+            autoplay: true,
+            arrows:false,
+            dots: true
+          });
         </script>
     </body>
 </html>
