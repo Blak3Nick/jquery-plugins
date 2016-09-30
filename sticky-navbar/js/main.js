@@ -17,4 +17,6 @@ $('.header').on('sticky-end', function(){
 
 });
 
-//$('.work').sticky({})
+$('.work').sticky({
+  topSpacing: 60
+});
