@@ -6,7 +6,10 @@ $(".animsition").animsition({
   outDuration: 500
 });
 //$("")nth-child(3).addClass("sticky button");
-$('.header').sticky();
+$('.header').sticky({
+  getWidthFrom:'.container',
+  responsiveWidth: true
+});
 
 $('.header').on('sticky-start', function(){
     $('.description').html('We build <strong>great</strong>apps');
@@ -18,5 +21,11 @@ $('.header').on('sticky-end', function(){
 });
 
 $('.work').sticky({
-  topSpacing: 60
+  topSpacing: 60, getWidthFrom: '.container', responsiveWidth: true
+});
+$('.work').on('sticky-start', function() {
+  $(this).append(' <a href="mailto:email@website.com" class="email-text">Email&nbsp;us</a>');
+});
+$('.work').on('sticky-end', function() {
+  $('.email-text').remove();
 });
